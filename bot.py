@@ -1,3 +1,4 @@
+import os
 import logging
 from datetime import datetime
 import sqlite3
@@ -286,7 +287,16 @@ Các lệnh có sẵn:
         self.updater.start_polling()
         self.updater.idle()
 
+import os
+
 if __name__ == '__main__':
-    # Thay YOUR_BOT_TOKEN bằng token của bạn
-    bot = FinanceBot('7890411873:AAGiPSIi461anGAFPx8HzEsOcEthXMjATYA')
+    # Lấy token từ biến môi trường
+    bot_token = os.getenv("BOT_TOKEN")
+    
+    # Kiểm tra xem token có được cung cấp hay không
+    if not bot_token:
+        raise ValueError("Không tìm thấy BOT_TOKEN trong Config Vars")
+
+    # Khởi chạy bot
+    bot = FinanceBot(bot_token)
     bot.run()
