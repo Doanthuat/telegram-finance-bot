@@ -288,5 +288,5 @@ Các lệnh có sẵn:
 
 if __name__ == '__main__':
     # Thay YOUR_BOT_TOKEN bằng token của bạn
-    bot = FinanceBot('YOUR_BOT_TOKEN')
+    bot = FinanceBot('7890411873:AAGiPSIi461anGAFPx8HzEsOcEthXMjATYA')
     bot.run()
