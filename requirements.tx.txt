@@ -1,0 +1,4 @@
+Copypython-telegram-bot
+pandas
+matplotlib
+forex-python
